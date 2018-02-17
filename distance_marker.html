@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link rel="stylesheet" href="css/distance_marker.css">
+        <title>Search for a latitude/longitude</title>
+    </head>
+    <body>
+        <div id="searchArea">
+          <p>
+          <input type="text" name="marker1" id="address1" placeholder="Enter an address or coordinates" style="width:70%">
+          <button onclick="placeMarker(getElementById('address1').value,1)">Add Marker</button>
+          <input type="text" name="marker2" id="address2" placeholder="Enter an address or coordinates" style="width:70%">
+          <button onclick="placeMarker(getElementById('address2').value,2)">Add Marker</button><br><br>
+          <button onclick="computeDistance()" style="margin-left:auto;margin-right:auto;width:90%">Get distance</button>
+          </p>
+        </div>
+        <div id="map"></div>
+    </body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoazDxs2jim0NnszXP9vmZUSF8gQd71VA&libraries=geometry"></script>
+    <script type="text/javascript" src="js/distance_marker.js"></script>
+</html>
