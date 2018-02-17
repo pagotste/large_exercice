@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <link rel="stylesheet" href="css/marker_to_location.css">
+        <title>Search for a latitude/longitude</title>
+    </head>
+    <body>
+        <div id="searchArea">
+          <p>
+          <input type="text" name="address" id="addressToSearch" placeholder="Enter an address or coordinates" style="width:70%">
+          <button onclick="placeMarker()">Search</button>
+          <a href="index.html">Return</a>
+          </p>
+        </div>
+        <div id="map"></div>
+    </body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoazDxs2jim0NnszXP9vmZUSF8gQd71VA"></script>
+    <script type="text/javascript" src="js/marker_to_location.js"></script>
+</html>
