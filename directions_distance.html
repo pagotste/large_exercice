@@ -7,12 +7,11 @@
         <title>Search for a latitude/longitude</title>
     </head>
     <body>
+        <div id="directionsBlock"></div>
         <div id="searchArea">
           <p>
-          Start :<input type="text" name="marker1" id="address1" placeholder="Enter an address or coordinates">
-          <button onclick="placeMarker(getElementById('address1').value,1)">Add</button>
-          End : <input type="text" name="marker2" id="address2" placeholder="Enter an address or coordinates">
-          <button onclick="placeMarker(getElementById('address2').value,2)">Add</button>
+          Start :<input type="text" name="marker1" id="address1" placeholder="Enter an address or coordinates" onfocusout="placeMarker(this.value,1)"><br>
+          End : <input type="text" name="marker2" id="address2" placeholder="Enter an address or coordinates" onfocusout="placeMarker(this.value,2)">
           <div class="center"><button onclick="calculateItinerary()" style="width:90%">Calculate itinerary</button></div>
           </p>
         </div>
