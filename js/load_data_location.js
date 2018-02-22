@@ -45,7 +45,11 @@ function placeMarker(data,data_lat,data_lng,type){
         map.setCenter(marker.position);
         map.setZoom(8);
       });
-    }else{
+    }else if (status === google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+            setTimeout(function() {
+                placeMarker(data,data_lat,data_lng,type);
+            }, 200);
+    } else{
       alert('Geocode was not successful for the following reason: ' + status);
     }
   });
