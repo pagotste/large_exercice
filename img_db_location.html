@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+     <link rel="stylesheet" href="css/info_db_location.css">
+     <title>Add an image to a database based on the location specified</title>
+   </head>
+   <body>
+      <div class="center" id="searchArea">
+        <input type="text" name="address" placeholder="Enter an address or coordinates" id="addressToSearch" onfocusout="placeMarker()"><br>
+        <input type="text" name="info" placeholder="Image URL to add to database..." id="imgToAdd"><br>
+        <button type="button" name="uploadimg" id="uploadimg">... Or upload one from your phone</button> <br>
+        <button type="button" name="button" onclick="addData(0)">Add</button>
+      </div>
+      <div id="map"></div>
+   </body>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoazDxs2jim0NnszXP9vmZUSF8gQd71VA"></script>
+   <script type="text/javascript" src="js/img_db_location.js"></script>
+</html>
