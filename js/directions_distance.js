@@ -8,9 +8,10 @@ var map = new google.maps.Map(document.getElementById('map'),{
 var mk1,mk2;
 var geocoder = new google.maps.Geocoder();
 
-var directionsService = new google.maps.DirectionsService;
-var directionsDisplay = new google.maps.DirectionsRenderer;
+var directionsService = new google.maps.DirectionsService();
+var directionsDisplay = new google.maps.DirectionsRenderer();
 directionsDisplay.setMap(map);
+directionsDisplay.setPanel(document.getElementById("directionsBlock"));
 
 
 function placeMarker(address,nb){
@@ -50,12 +51,7 @@ function calculateItinerary(){
   }, function(response, status) {
     if (status === 'OK') {
       directionsDisplay.setDirections(response);
-
-      var result = directionsDisplay.getDirections();
-      var distance = "Distance : " + result.routes[0].legs[0].distance.value/1000 + " km";
-      var searchArea = document.getElementById("searchArea");
-      //searchArea.style.height = "8.5em";
-      searchArea.innerHTML += distance;
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     } else {
       window.alert('Directions request failed due to ' + status);
     }
